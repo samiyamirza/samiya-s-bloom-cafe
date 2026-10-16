@@ -3,153 +3,856 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samiya's Little Bloom Cafe</title>
-  <meta name="description" content="Samiya's Little Bloom Cafe — a cozy corner for fresh blooms, warm brews, and homemade bakes." />
+  <title>Samiya's Little Bloom Cafe | Flowers, Cakes & Little Happy Moments</title>
+  <meta name="description" content="Samiya's Little Bloom Cafe — a cute little flower & mini bakery boutique. Fresh bouquets, cupcakes, brownies, cookies, gift combos & handmade keychains by Samiya Mirza." />
+
+  <!-- Cute favicon (no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧁</text></svg>" />
+
+  <!-- Elegant + cute fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#top">
-        <span class="brand-mark">✿</span>
-        Samiya's <em>Little Bloom</em> Cafe
+
+  <!-- ============ TOP ANNOUNCEMENT BAR ============ -->
+  <div class="announce-bar">
+    🧁 Fresh cakes &amp; hand-tied blooms every day &nbsp;•&nbsp; Free delivery above ₹999 &nbsp;•&nbsp; Gift wrapping with love 🌸
+  </div>
+
+  <!-- ============ HEADER + NAVIGATION BAR ============ -->
+  <header class="header" id="home">
+    <nav class="nav container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🌷</span>
+        <span class="logo-text">Samiya's <span class="logo-accent">Little Bloom Cafe</span></span>
       </a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#visit">Visit</a>
-        <a href="#contact" class="btn btn-small">Say Hello</a>
-      </nav>
-    </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a class="nav-link" href="#flowers"><i class="fa-solid fa-fan"></i> Flowers</a></li>
+        <li><a class="nav-link" href="#bakery"><i class="fa-solid fa-cookie-bite"></i> Bakery</a></li>
+        <li><a class="nav-link" href="#handmade"><i class="fa-solid fa-heart"></i> Handmade</a></li>
+        <li><a class="nav-link" href="#gifts"><i class="fa-solid fa-gift"></i> Gifts</a></li>
+        <li><a class="nav-link" href="#about"><i class="fa-solid fa-store"></i> About</a></li>
+        <li><a class="nav-link" href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Open shopping cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Fresh blooms &amp; warm brews · Est. 2021</p>
-        <h1>A little cafe where<br /><span class="accent">flowers meet flavour</span></h1>
-        <p class="lede">
-          Cozy corners, garden-fresh ingredients, and bakes made each morning.
-          Pull up a chair — your table by the window is waiting.
-        </p>
-        <div class="hero-actions">
-          <a href="#menu" class="btn">Explore the Menu</a>
-          <a href="#visit" class="btn btn-ghost">Find Us</a>
+  <!-- ============ HOME / HERO BANNER ============ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="petals" id="petals" aria-hidden="true"></div>
+
+    <div class="hero-content container">
+      <span class="hero-badge reveal">🧁 A tiny flower &amp; bakery boutique 🌸</span>
+      <h1 class="reveal">Flowers, Cakes &amp;<br /><em>Little Happy Moments</em></h1>
+      <p class="hero-sub reveal">
+        Dreamy pastel blooms, warm little bakes and handmade cuties — all wrapped up
+        with love by <strong>Samiya Mirza</strong> in our cozy little cafe garden.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#flowers" class="btn btn-primary">Shop Flowers <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#bakery" class="btn btn-outline">Order Treats 🧁</a>
+        <a href="#gifts" class="btn btn-ghost">Gift Combos 🎁</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Little feature strip -->
+  <div class="features container reveal">
+    <div class="feature"><span class="feature-icon">🌸</span><div><strong>Fresh Blooms</strong><small>Cut every morning</small></div></div>
+    <div class="feature"><span class="feature-icon">🧁</span><div><strong>Baked Daily</strong><small>In tiny batches</small></div></div>
+    <div class="feature"><span class="feature-icon">🎁</span><div><strong>Gift Combos</strong><small>Flowers + treats</small></div></div>
+    <div class="feature"><span class="feature-icon">🧶</span><div><strong>Handmade</strong><small>Keychains &amp; crochet</small></div></div>
+  </div>
+
+  <!-- ============ OUR FLOWERS ============ -->
+  <section class="section" id="flowers">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Pick your petals</span>
+        <h2 class="section-title">Our Flowers <span class="heading-flower">🌸</span></h2>
+        <p class="section-sub">Roses of every colour, spring tulips and happy sunflowers — hand-tied in soft pastel paper.</p>
+        <a class="cross-link" href="#bakery">Looking for treats? Visit our Mini Bakery <i class="fa-solid fa-arrow-right"></i> 🧁</a>
+      </div>
+
+      <div class="flower-grid">
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Rose</span>
+            <img src="https://images.pexels.com/photos/19526362/pexels-photo-19526362.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Red Rose" loading="lazy" data-type="rose" data-color="#e0245e" />
+            <button class="add-btn" data-id="red-rose" data-name="Red Rose" data-price="499" data-img="https://images.pexels.com/photos/19526362/pexels-photo-19526362.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Red Rose</h3>
+            <p>The timeless symbol of love — deep velvet red blooms.</p>
+            <div class="flower-bottom">
+              <span class="price">₹499</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(120)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Rose</span>
+            <img src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pink Rose" loading="lazy" data-type="rose" data-color="#ff8fb3" />
+            <button class="add-btn" data-id="pink-rose" data-name="Pink Rose" data-price="449" data-img="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Pink Rose</h3>
+            <p>Soft blush petals for sweet "thinking of you" moments.</p>
+            <div class="flower-bottom">
+              <span class="price">₹449</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8 <small>(98)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Rose</span>
+            <img src="https://images.pexels.com/photos/12082733/pexels-photo-12082733.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Yellow Rose" loading="lazy" data-type="rose" data-color="#f7b733" />
+            <button class="add-btn" data-id="yellow-rose" data-name="Yellow Rose" data-price="399" data-img="https://images.pexels.com/photos/12082733/pexels-photo-12082733.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Yellow Rose</h3>
+            <p>Sunny golden blooms that say friendship &amp; happiness.</p>
+            <div class="flower-bottom">
+              <span class="price">₹399</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.7 <small>(76)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Rose</span>
+            <img src="https://images.pexels.com/photos/22081385/pexels-photo-22081385.jpeg?auto=compress&cs=tinysrgb&w=800" alt="White Rose" loading="lazy" data-type="rose" data-color="#f3e5d8" />
+            <button class="add-btn" data-id="white-rose" data-name="White Rose" data-price="549" data-img="https://images.pexels.com/photos/22081385/pexels-photo-22081385.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>White Rose</h3>
+            <p>Pure &amp; elegant — perfect for weddings and new beginnings.</p>
+            <div class="flower-bottom">
+              <span class="price">₹549</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(64)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Rose</span>
+            <img src="https://images.pexels.com/photos/35981637/pexels-photo-35981637.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Purple Rose" loading="lazy" data-type="rose" data-color="#9b6bc0" />
+            <button class="add-btn" data-id="purple-rose" data-name="Purple Rose" data-price="599" data-img="https://images.pexels.com/photos/35981637/pexels-photo-35981637.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Purple Rose</h3>
+            <p>Rare lavender-purple roses for a magical surprise.</p>
+            <div class="flower-bottom">
+              <span class="price">₹599</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 5.0 <small>(41)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Tulip</span>
+            <img src="https://images.pexels.com/photos/35365521/pexels-photo-35365521.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pink Tulips" loading="lazy" data-type="tulip" data-color="#ff8fb3" />
+            <button class="add-btn" data-id="pink-tulips" data-name="Pink Tulips (bunch of 10)" data-price="349" data-img="https://images.pexels.com/photos/35365521/pexels-photo-35365521.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Pink Tulips</h3>
+            <p>Gentle spring tulips — a bundle of 10 fresh stems.</p>
+            <div class="flower-bottom">
+              <span class="price">₹349</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8 <small>(87)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Tulip</span>
+            <img src="https://images.pexels.com/photos/31745795/pexels-photo-31745795.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Yellow Tulips" loading="lazy" data-type="tulip" data-color="#f7b733" />
+            <button class="add-btn" data-id="yellow-tulips" data-name="Yellow Tulips (bunch of 10)" data-price="379" data-img="https://images.pexels.com/photos/31745795/pexels-photo-31745795.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Yellow Tulips</h3>
+            <p>Cheerful golden tulips that brighten any room.</p>
+            <div class="flower-bottom">
+              <span class="price">₹379</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.7 <small>(62)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Sunflower</span>
+            <img src="https://images.pexels.com/photos/19744809/pexels-photo-19744809.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sunflower" loading="lazy" data-type="sunflower" data-color="#f7b733" />
+            <button class="add-btn" data-id="sunflower" data-name="Happy Sunflower" data-price="299" data-img="https://images.pexels.com/photos/19744809/pexels-photo-19744809.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Happy Sunflower</h3>
+            <p>A big smiling sunflower to chase the clouds away.</p>
+            <div class="flower-bottom">
+              <span class="price">₹299</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(150)</small></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MINI BAKERY ============ -->
+  <section class="section section-cream" id="bakery">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Fresh from our little oven</span>
+        <h2 class="section-title">Mini Bakery <span class="heading-flower">🧁</span></h2>
+        <p class="section-sub">Cute cupcakes, mini cakes, brownies, cookies and dreamy desserts — baked fresh in tiny happy batches.</p>
+        <a class="cross-link" href="#flowers">Looking for blooms? Visit our Flower Corner <i class="fa-solid fa-arrow-right"></i> 🌸</a>
+      </div>
+
+      <div class="flower-grid">
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Cupcake</span>
+            <span class="new-dot">Baked today</span>
+            <img src="https://images.pexels.com/photos/592392/pexels-photo-592392.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pastel Cupcake" loading="lazy" data-type="cupcake" data-color="#f6b4c9" />
+            <button class="add-btn" data-id="pastel-cupcakes" data-name="Pastel Cupcakes (box of 6)" data-price="399" data-img="https://images.pexels.com/photos/592392/pexels-photo-592392.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Pastel Cupcakes</h3>
+            <p>Fluffy vanilla cupcakes with dreamy pastel buttercream (box of 6).</p>
+            <div class="flower-bottom">
+              <span class="price">₹399</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(180)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Mini Cake</span>
+            <img src="https://images.pexels.com/photos/37108067/pexels-photo-37108067.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mini strawberry cakes with pink glaze" loading="lazy" data-type="cake" data-color="#f6b4c9" />
+            <button class="add-btn" data-id="mini-cakes" data-name="Strawberry Mini Cakes (set of 2)" data-price="299" data-img="https://images.pexels.com/photos/37108067/pexels-photo-37108067.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Strawberry Mini Cakes</h3>
+            <p>Tiny pink-glazed cakes topped with fresh strawberries (set of 2).</p>
+            <div class="flower-bottom">
+              <span class="price">₹299</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8 <small>(94)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Brownie</span>
+            <img src="https://images.pexels.com/photos/29819836/pexels-photo-29819836.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fudgy chocolate brownie with strawberries" loading="lazy" data-type="brownie" data-color="#7a5240" />
+            <button class="add-btn" data-id="fudgy-brownie" data-name="Fudgy Chocolate Brownie" data-price="249" data-img="https://images.pexels.com/photos/29819836/pexels-photo-29819836.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Fudgy Brownie</h3>
+            <p>Deep, chewy chocolate brownie with a melt-in-mouth centre.</p>
+            <div class="flower-bottom">
+              <span class="price">₹249</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(210)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Cookies</span>
+            <img src="https://images.pexels.com/photos/28122562/pexels-photo-28122562.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Stack of chocolate chip cookies" loading="lazy" data-type="cookie" data-color="#d9a76a" />
+            <button class="add-btn" data-id="choc-chip-cookies" data-name="Choco-Chip Cookies (8 pcs)" data-price="199" data-img="https://images.pexels.com/photos/28122562/pexels-photo-28122562.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Choco-Chip Cookies</h3>
+            <p>Crispy-edge, soft-centre cookies packed with chocolate chips (8 pcs).</p>
+            <div class="flower-bottom">
+              <span class="price">₹199</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8 <small>(163)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Strawberry</span>
+            <img src="https://images.pexels.com/photos/32003693/pexels-photo-32003693.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Heart-shaped strawberry tart" loading="lazy" data-type="cake" data-color="#ef6f8e" />
+            <button class="add-btn" data-id="strawberry-tart" data-name="Heart Strawberry Tart" data-price="349" data-img="https://images.pexels.com/photos/32003693/pexels-photo-32003693.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Heart Strawberry Tart</h3>
+            <p>Buttery crust, vanilla cream &amp; heart-shaped fresh strawberries.</p>
+            <div class="flower-bottom">
+              <span class="price">₹349</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(112)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Chocolate</span>
+            <img src="https://images.pexels.com/photos/14668476/pexels-photo-14668476.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chocolate mousse dessert jar" loading="lazy" data-type="brownie" data-color="#6f4a35" />
+            <button class="add-btn" data-id="choco-mousse-jar" data-name="Choco Mousse Jar" data-price="299" data-img="https://images.pexels.com/photos/14668476/pexels-photo-14668476.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Choco Mousse Jar</h3>
+            <p>Silky chocolate mousse layered with cream in a cute little jar.</p>
+            <div class="flower-bottom">
+              <span class="price">₹299</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8 <small>(87)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal special-card">
+          <div class="flower-img">
+            <span class="flower-tag">Cafe Special</span>
+            <span class="new-dot">Cafe Special</span>
+            <img src="https://images.pexels.com/photos/4529012/pexels-photo-4529012.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chokie Chokie - fudgy chocolate brownie stack with melting chocolate" loading="lazy" data-type="brownie" data-color="#5e3d2c" />
+            <button class="add-btn" data-id="chokie-chokie" data-name="Chokie Chokie" data-price="329" data-img="https://images.pexels.com/photos/4529012/pexels-photo-4529012.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Chokie Chokie</h3>
+            <p>Our signature: a fudgy brownie crowned with a warm choco-cookie — double the choco, double the love! 🍪🍫</p>
+            <div class="flower-bottom">
+              <span class="price">₹329</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 5.0 <small>(240)</small></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HANDMADE CUTIES (keychains & crochet flowers) ============ -->
+  <section class="section" id="handmade">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Made by hand, made with love</span>
+        <h2 class="section-title">Handmade Cuties <span class="heading-flower">🧶</span></h2>
+        <p class="section-sub">Little handmade keychains and crochet flower bouquets — the sweetest tiny gifts.</p>
+      </div>
+
+      <div class="handmade-grid">
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Keychain</span>
+            <img src="https://images.pexels.com/photos/38634279/pexels-photo-38634279.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Colorful handmade amigurumi keychains" loading="lazy" data-type="keychain" data-color="#f6b4c9" />
+            <button class="add-btn" data-id="amigurumi-keychain" data-name="Amigurumi Keychain" data-price="149" data-img="https://images.pexels.com/photos/38634279/pexels-photo-38634279.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Amigurumi Keychain</h3>
+            <p>Adorable crocheted cutie to keep your keys smiling.</p>
+            <div class="flower-bottom">
+              <span class="price">₹149</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(66)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Handmade</span>
+            <img src="https://images.pexels.com/photos/20269075/pexels-photo-20269075.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bouquet of handmade crochet flowers" loading="lazy" data-type="rose" data-color="#c08fd8" />
+            <button class="add-btn" data-id="crochet-bouquet" data-name="Crochet Mini Bouquet" data-price="349" data-img="https://images.pexels.com/photos/20269075/pexels-photo-20269075.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Crochet Mini Bouquet</h3>
+            <p>Woollen flowers that never wilt — pure handmade charm.</p>
+            <div class="flower-bottom">
+              <span class="price">₹349</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8 <small>(52)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card reveal">
+          <div class="flower-img">
+            <span class="flower-tag">Handmade</span>
+            <img src="https://images.pexels.com/photos/18692026/pexels-photo-18692026.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Handmade knitted sunflowers and pink flowers" loading="lazy" data-type="sunflower" data-color="#f0c25a" />
+            <button class="add-btn" data-id="knitted-sunshine" data-name="Knitted Sunshine Mini" data-price="299" data-img="https://images.pexels.com/photos/18692026/pexels-photo-18692026.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Knitted Sunshine Mini</h3>
+            <p>Hand-knitted sunflowers &amp; pink blooms for your desk or shelf.</p>
+            <div class="flower-bottom">
+              <span class="price">₹299</span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(44)</small></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEST SELLERS (flowers + bakery, filterable) ============ -->
+  <section class="section section-blush" id="bestsellers">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Everyone's favourites</span>
+        <h2 class="section-title">Best Sellers <span class="heading-flower">👑</span></h2>
+        <p class="section-sub">Our most-loved blooms &amp; bakes — the ones that keep getting reordered.</p>
+
+        <div class="filter-chips reveal" id="filterChips">
+          <button class="chip active" data-filter="all">All ✨</button>
+          <button class="chip" data-filter="flower">🌸 Flowers</button>
+          <button class="chip" data-filter="bakery">🧁 Bakery</button>
         </div>
       </div>
-      <div class="hero-blooms" aria-hidden="true">🌸 🌷 🌼 🌸 🌷</div>
-    </section>
 
-    <section id="about" class="section about">
-      <div class="container split">
-        <div class="split-text">
-          <p class="eyebrow">Our Story</p>
-          <h2>Grown with love, served with a smile</h2>
+      <div class="bouquet-grid" id="bestGrid">
+
+        <article class="flower-card best-card reveal" data-cat="flower">
+          <span class="ribbon"><i class="fa-solid fa-crown"></i> Best Seller</span>
+          <div class="flower-img">
+            <span class="flower-tag">Bouquet</span>
+            <img src="https://images.pexels.com/photos/20230082/pexels-photo-20230082.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pink Romance Bouquet" loading="lazy" data-type="rose" data-color="#ff8fb3" />
+            <button class="add-btn" data-id="pink-romance" data-name="Pink Romance Bouquet" data-price="1299" data-img="https://images.pexels.com/photos/20230082/pexels-photo-20230082.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Pink Romance Bouquet</h3>
+            <p>20 fresh pink roses with soft green fillers.</p>
+            <div class="flower-bottom">
+              <span class="price">₹1,299 <small class="old-price">₹1,599</small></span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(210)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card best-card reveal" data-cat="bakery">
+          <span class="ribbon"><i class="fa-solid fa-crown"></i> Best Seller</span>
+          <div class="flower-img">
+            <span class="flower-tag">Bakery</span>
+            <img src="https://images.pexels.com/photos/8478142/pexels-photo-8478142.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cupcake Dream Box with pastel frosting" loading="lazy" data-type="cupcake" data-color="#f6b4c9" />
+            <button class="add-btn" data-id="cupcake-dream-box" data-name="Cupcake Dream Box (12 pcs)" data-price="599" data-img="https://images.pexels.com/photos/8478142/pexels-photo-8478142.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Cupcake Dream Box</h3>
+            <p>12 pastel-frosted cupcakes in mixed flavours.</p>
+            <div class="flower-bottom">
+              <span class="price">₹599 <small class="old-price">₹749</small></span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(190)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card best-card reveal" data-cat="flower">
+          <span class="ribbon"><i class="fa-solid fa-crown"></i> Best Seller</span>
+          <div class="flower-img">
+            <span class="flower-tag">Bouquet</span>
+            <img src="https://images.pexels.com/photos/27291943/pexels-photo-27291943.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rainbow Rose Bouquet" loading="lazy" data-type="rose" data-color="#c084d8" />
+            <button class="add-btn" data-id="rainbow-roses" data-name="Rainbow Rose Bouquet" data-price="1499" data-img="https://images.pexels.com/photos/27291943/pexels-photo-27291943.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Rainbow Rose Bouquet</h3>
+            <p>Every rose colour, wrapped in pretty pink paper.</p>
+            <div class="flower-bottom">
+              <span class="price">₹1,499 <small class="old-price">₹1,899</small></span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 5.0 <small>(164)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card best-card reveal" data-cat="bakery">
+          <span class="ribbon"><i class="fa-solid fa-crown"></i> Best Seller</span>
+          <div class="flower-img">
+            <span class="flower-tag">Bakery</span>
+            <img src="https://images.pexels.com/photos/32916204/pexels-photo-32916204.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Assorted mini cream cakes" loading="lazy" data-type="cake" data-color="#f6b4c9" />
+            <button class="add-btn" data-id="mini-cake-box" data-name="Mini Cake Party Box (6 pcs)" data-price="549" data-img="https://images.pexels.com/photos/32916204/pexels-photo-32916204.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Mini Cake Party Box</h3>
+            <p>6 assorted mini cream cakes — one of every flavour.</p>
+            <div class="flower-bottom">
+              <span class="price">₹549 <small class="old-price">₹699</small></span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.8 <small>(120)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card best-card reveal" data-cat="flower">
+          <span class="ribbon"><i class="fa-solid fa-crown"></i> Best Seller</span>
+          <div class="flower-img">
+            <span class="flower-tag">Bouquet</span>
+            <img src="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pastel Dream Bouquet" loading="lazy" data-type="rose" data-color="#f4b8c9" />
+            <button class="add-btn" data-id="pastel-dream" data-name="Pastel Dream Bouquet" data-price="999" data-img="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Pastel Dream Bouquet</h3>
+            <p>Soft pastel ranunculus — our gentlest bouquet.</p>
+            <div class="flower-bottom">
+              <span class="price">₹999 <small class="old-price">₹1,249</small></span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(128)</small></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="flower-card best-card reveal" data-cat="bakery">
+          <span class="ribbon"><i class="fa-solid fa-crown"></i> Best Seller</span>
+          <div class="flower-img">
+            <span class="flower-tag">Bakery</span>
+            <img src="https://images.pexels.com/photos/39850256/pexels-photo-39850256.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Brownie love box squares" loading="lazy" data-type="brownie" data-color="#6f4a35" />
+            <button class="add-btn" data-id="brownie-love-box" data-name="Brownie Love Box (6 pcs)" data-price="499" data-img="https://images.pexels.com/photos/39850256/pexels-photo-39850256.jpeg?auto=compress&cs=tinysrgb&w=300">
+              <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+            </button>
+          </div>
+          <div class="flower-info">
+            <h3>Brownie Love Box</h3>
+            <p>6 fudgy cocoa-dusted brownie squares in a gift box.</p>
+            <div class="flower-bottom">
+              <span class="price">₹499 <small class="old-price">₹649</small></span>
+              <span class="rating"><i class="fa-solid fa-star"></i> 4.9 <small>(175)</small></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECIAL GIFT COMBOS ============ -->
+  <section class="section section-cream" id="gifts">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">Flowers + treats, together</span>
+        <h2 class="section-title">Special Gift Combos <span class="heading-flower">🎁</span></h2>
+        <p class="section-sub">One gift, double the joy — a hand-tied bouquet paired with fresh bakes, wrapped in pastel paper.</p>
+      </div>
+
+      <div class="combo-grid">
+
+        <article class="combo-card reveal">
+          <div class="combo-img">
+            <img src="https://images.pexels.com/photos/30692083/pexels-photo-30692083.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cake and pink flowers birthday setup" loading="lazy" data-type="cake" data-color="#f6b4c9" />
+            <span class="combo-badge">🌸 + 🧁</span>
+          </div>
+          <div class="combo-body">
+            <h3>Birthday Bloom Box</h3>
+            <ul class="combo-list">
+              <li>Pink rose bouquet (10 stems)</li>
+              <li>Fresh strawberry cream cake</li>
+              <li>Free birthday topper &amp; card</li>
+            </ul>
+            <div class="combo-bottom">
+              <span class="price">₹1,599 <small class="old-price">₹1,999</small></span>
+              <button class="add-btn combo-add" data-id="birthday-bloom-box" data-name="Birthday Bloom Box" data-price="1599" data-img="https://images.pexels.com/photos/30692083/pexels-photo-30692083.jpeg?auto=compress&cs=tinysrgb&w=300">
+                <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="combo-card reveal">
+          <div class="combo-img">
+            <img src="https://images.pexels.com/photos/433527/pexels-photo-433527.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pink flower cake with bouquet" loading="lazy" data-type="cake" data-color="#f2a2bc" />
+            <span class="combo-badge">🌷 + 🍓</span>
+          </div>
+          <div class="combo-body">
+            <h3>Pink Dream Combo</h3>
+            <ul class="combo-list">
+              <li>Pink tulips bunch (10 stems)</li>
+              <li>Heart strawberry tarts (2 pcs)</li>
+              <li>Pastel gift wrap &amp; ribbon</li>
+            </ul>
+            <div class="combo-bottom">
+              <span class="price">₹1,299 <small class="old-price">₹1,649</small></span>
+              <button class="add-btn combo-add" data-id="pink-dream-combo" data-name="Pink Dream Combo" data-price="1299" data-img="https://images.pexels.com/photos/433527/pexels-photo-433527.jpeg?auto=compress&cs=tinysrgb&w=300">
+                <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="combo-card reveal">
+          <div class="combo-img">
+            <img src="https://images.pexels.com/photos/30469068/pexels-photo-30469068.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Elegant floral celebration cake" loading="lazy" data-type="cake" data-color="#e8b7cb" />
+            <span class="combo-badge">💐 + 🎂</span>
+          </div>
+          <div class="combo-body">
+            <h3>Floral Celebration Combo</h3>
+            <ul class="combo-list">
+              <li>Seasonal flower bouquet</li>
+              <li>Floral cream celebration cake (500g)</li>
+              <li>Handwritten love note</li>
+            </ul>
+            <div class="combo-bottom">
+              <span class="price">₹1,899 <small class="old-price">₹2,399</small></span>
+              <button class="add-btn combo-add" data-id="floral-celebration" data-name="Floral Celebration Combo" data-price="1899" data-img="https://images.pexels.com/photos/30469068/pexels-photo-30469068.jpeg?auto=compress&cs=tinysrgb&w=300">
+                <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT US ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img reveal">
+          <img src="https://images.pexels.com/photos/4238353/pexels-photo-4238353.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Samiya arranging a flower bouquet" loading="lazy" data-type="rose" data-color="#ff8fb3" />
+          <div class="about-badge">🌷🧁 Since 2018 🧁🌷</div>
+          <div class="about-floating-card">
+            <span class="float-icon">💐</span>
+            <div><strong>2,500+</strong><small>Happy Customers</small></div>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <span class="section-tag">Our little story</span>
+          <h2 class="section-title">About Our Boutique <span class="heading-flower">🌸</span></h2>
           <p>
-            Little Bloom began as a flower stand on a sunny street corner. Samiya
-            dreamed of a place where a good cup of tea and a bunch of fresh
-            flowers could share the same counter — and so this cafe was born.
+            Hello, I'm <strong>Samiya Mirza</strong> — the flower lover and cake baker behind
+            <strong>Samiya's Little Bloom Cafe</strong>. What began in 2018 as a tiny table of home-grown
+            flowers has blossomed into a dreamy little boutique where fresh blooms share a shelf with
+            warm cupcakes and fudgy brownies.
           </p>
           <p>
-            Everything here is made in small batches: syrups infused with real
-            petals, bread proofed overnight, and cakes decorated like little
-            gardens.
+            Everything here is made in small batches with love — flowers hand-tied every morning,
+            cakes baked fresh daily, and handmade keychains crocheted stitch by stitch. We're a
+            small luxury boutique, not a big supermarket: one table, two passions, endless love. 💖
           </p>
-          <ul class="badges">
-            <li>🌼 Fresh daily bakes</li>
-            <li>🌹 Seasonal flower shop</li>
-            <li>🍵 House-blend teas</li>
-          </ul>
-        </div>
-        <div class="split-card">
-          <blockquote>
-            “Every cup should bloom a little joy in your day.”
-            <cite>— Samiya, founder</cite>
-          </blockquote>
+
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num" data-target="7">0</span><span class="stat-label">Years of Love</span></div>
+            <div class="stat"><span class="stat-num" data-target="2500" data-suffix="+">0</span><span class="stat-label">Happy Customers</span></div>
+            <div class="stat"><span class="stat-num" data-target="100" data-suffix="%">0</span><span class="stat-label">Fresh &amp; Handmade</span></div>
+          </div>
+
+          <div class="founder-card">
+            <div class="founder-avatar">SM</div>
+            <div>
+              <strong>Samiya Mirza</strong>
+              <small>Founder · Florist &amp; Baker</small>
+              <div class="founder-contact">
+                <a href="tel:+916859595968"><i class="fa-solid fa-phone"></i> 6859595968</a>
+                <a href="mailto:samiyaflowerly@gmail.com"><i class="fa-solid fa-envelope"></i> samiyaflowerly@gmail.com</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="menu" class="section menu">
-      <div class="container">
-        <p class="eyebrow center">The Menu</p>
-        <h2 class="center">Little things, made beautifully</h2>
-        <div class="menu-grid">
-          <article class="menu-card">
-            <h3>☕ Coffee &amp; Tea</h3>
-            <ul>
-              <li><span>Rose Latte</span><span>$4.50</span></li>
-              <li><span>Honey Lavender Espresso</span><span>$4.75</span></li>
-              <li><span>Garden Mint Iced Tea</span><span>$3.90</span></li>
-              <li><span>Classic Cappuccino</span><span>$4.20</span></li>
-            </ul>
-          </article>
-          <article class="menu-card featured">
-            <h3>🍰 Bakes &amp; Bites</h3>
-            <ul>
-              <li><span>Lemon Elderflower Cake</span><span>$5.50</span></li>
-              <li><span>Strawberry Blossom Scone</span><span>$3.75</span></li>
-              <li><span>Vanilla Bean Croissant</span><span>$3.50</span></li>
-              <li><span>Petals &amp; Cream Cookie</span><span>$2.75</span></li>
-            </ul>
-          </article>
-          <article class="menu-card">
-            <h3>🥗 Fresh Plates</h3>
-            <ul>
-              <li><span>Bloom Garden Salad</span><span>$9.50</span></li>
-              <li><span>Avocado Blossom Toast</span><span>$8.75</span></li>
-              <li><span>Herb Chicken Sandwich</span><span>$10.20</span></li>
-              <li><span>Soup of the Day</span><span>$6.50</span></li>
-            </ul>
-          </article>
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-blush" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-tag">We'd love to hear from you</span>
+        <h2 class="section-title">Get In Touch <span class="heading-flower">💌</span></h2>
+        <p class="section-sub">Custom bouquet? Dream cake? Tell us your idea and we'll bake &amp; bloom it for you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-cards reveal">
+          <a class="contact-card" href="tel:+916859595968">
+            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+            <div><strong>Call / WhatsApp</strong><small>6859595968</small></div>
+          </a>
+          <a class="contact-card" href="mailto:samiyaflowerly@gmail.com">
+            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div><strong>Email Us</strong><small>samiyaflowerly@gmail.com</small></div>
+          </a>
+          <div class="contact-card">
+            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div><strong>Visit Our Little Cafe</strong><small>Samiya's Little Bloom Cafe, Local Flower Market</small></div>
+          </div>
+          <div class="contact-card">
+            <span class="contact-icon"><i class="fa-solid fa-clock"></i></span>
+            <div><strong>Open Hours</strong><small>Mon – Sat · 8:00 AM to 8:00 PM</small></div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <h3>Send us a message 🌸</h3>
+          <div class="form-group">
+            <label for="cName">Your Name</label>
+            <input type="text" id="cName" class="form-control" placeholder="e.g. Aisha Khan" required />
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Your Email</label>
+            <input type="email" id="cEmail" class="form-control" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="cMsg">Your Message</label>
+            <textarea id="cMsg" class="form-control" rows="4" placeholder="Tell us about your dream cake or bouquet..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="footer-logo">🌷 Samiya's Little Bloom Cafe</a>
+        <p>A tiny boutique where flowers, cakes and little happy moments live together — hand-made with love by Samiya Mirza.</p>
+        <div class="socials">
+          <a class="social whatsapp" href="https://wa.me/916859595968" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a class="social snapchat" href="https://www.snapchat.com/add/samiyaflowerly" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+          <a class="social instagram" href="https://www.instagram.com/samiyaflowerly" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social facebook" href="https://www.facebook.com/samiyaflowerly" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social email" href="mailto:samiyaflowerly@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
-    </section>
 
-    <section id="visit" class="section visit">
-      <div class="container split">
-        <div class="split-text">
-          <p class="eyebrow">Visit Us</p>
-          <h2>Open every day, rain or shine</h2>
-          <p>
-            14 Willow Lane, Green Park<br />
-            Come for the bakes, stay for the blooms.
-          </p>
-          <table class="hours">
-            <tr><td>Monday – Friday</td><td>8:00 – 19:00</td></tr>
-            <tr><td>Saturday</td><td>9:00 – 20:00</td></tr>
-            <tr><td>Sunday</td><td>9:00 – 17:00</td></tr>
-          </table>
-        </div>
-        <div class="split-card hours-card">
-          <h3>Today's Special</h3>
-          <p class="special">🌷 Petal Party Afternoon Tea</p>
-          <p>A tiered stand of scones, finger sandwiches, and bloom-infused teas for two.</p>
-          <p class="price">$24.00</p>
-        </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#flowers">🌸 Flowers</a></li>
+          <li><a href="#bakery">🧁 Mini Bakery</a></li>
+          <li><a href="#handmade">🧶 Handmade Cuties</a></li>
+          <li><a href="#bestsellers">👑 Best Sellers</a></li>
+          <li><a href="#gifts">🎁 Gift Combos</a></li>
+          <li><a href="#about">💛 About Us</a></li>
+        </ul>
       </div>
-    </section>
 
-    <section id="contact" class="section cta">
-      <div class="container center">
-        <h2>Come say hello 🌸</h2>
-        <p class="lede">Reservations, flower orders, or just a friendly wave — we'd love to hear from you.</p>
-        <div class="hero-actions center-actions">
-          <a href="mailto:hello@littlebloomcafe.com" class="btn">hello@littlebloomcafe.com</a>
-          <a href="tel:+10000000000" class="btn btn-ghost">+1 (000) 000-0000</a>
-        </div>
+      <div class="footer-col">
+        <h4>Need Help?</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+916859595968">📞 6859595968</a></li>
+          <li><a href="mailto:samiyaflowerly@gmail.com">✉️ samiyaflowerly@gmail.com</a></li>
+          <li><span>🕐 Mon–Sat · 8 AM to 8 PM</span></li>
+          <li><span>🚚 Free delivery above ₹999</span></li>
+          <li><span>🎀 Free gift wrapping</span></li>
+        </ul>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>✿ Samiya's Little Bloom Cafe</p>
-      <p>© 2026 · Made with tea and petals</p>
+      <div class="footer-col">
+        <h4>Bloom Mail 🌸</h4>
+        <p>Seasonal cake menus, flower drops &amp; sweet offers — no spam, just petals and sprinkles.</p>
+        <form class="newsletter" id="newsletterForm" novalidate>
+          <input type="email" id="nlEmail" class="form-control" placeholder="Your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> Samiya's Little Bloom Cafe · All rights reserved · Made with 💖 &amp; 🧁 by <strong>Samiya Mirza</strong></p>
     </div>
   </footer>
+
+  <!-- ============ SHOPPING CART (side drawer) ============ -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>🛒 Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items" id="cartItems"><!-- filled by script.js --></div>
+
+    <div class="cart-footer">
+      <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+      <div class="cart-row"><span>Delivery</span><span id="cartDelivery">—</span></div>
+      <div class="cart-row cart-total"><span>Total</span><span id="cartTotal">₹0</span></div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout <i class="fa-solid fa-heart"></i></button>
+      <button class="clear-cart" id="clearCart">🗑️ Empty Cart</button>
+    </div>
+  </aside>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Back to top button -->
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <noscript>
+    <div class="noscript-note">Please enable JavaScript in your browser to use the shopping cart 🌸</div>
+  </noscript>
+
+  <script src="script.js"></script>
 </body>
 </html>
